@@ -1,8 +1,27 @@
 #include <stdio.h>
 
 int main() {
-   int n1, n2;
-   scanf("%i %i", &n1, &n2);
-   printf("SOMA = %i\n", n1+n2);
+   int n1, n, maior, menor;
+
+   scanf("%d", &n1);
+
+   for (int cont=0; cont<n1; cont++)
+   {
+      scanf("%d", &n);
+
+      if (cont==0)
+      {
+        maior=n;
+        menor=n;
+      }
+
+      if(maior<n)
+        maior=n;
+      if (menor>n)
+        menor=n;         
+   }
+
+   printf("MENOR = %d\n", menor);
+   printf("MAIOR = %d\n", maior);
    return 0;
 }
